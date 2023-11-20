@@ -1,0 +1,15 @@
+{
+  "name": "algorithm-quest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "yarn jest --config jest.config.js --passWithNoTests --detectOpenHandles --forceExit",
+    "test:watch": "yarn jest --config jest.config.js --passWithNoTests --detectOpenHandles --watchAll"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.6.4"
+  }
+}

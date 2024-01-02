@@ -74,3 +74,7 @@ function binarySearchForUpper(list, target) {
   return end;
 }
 ```
+
+### 참고 자료
+
+- https://kingseungil.tistory.com/169

@@ -1,4 +1,4 @@
-const solution = require('.');
+const solution = require('./Day1');
 
 describe('숫자 카드 2 문제', () => {
   it('예제 입력 1', () => {

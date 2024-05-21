@@ -1,20 +1,12 @@
-// const input = require('fs').readFileSync(0, 'utf-8').trim();
-
-const regexOne = /1/g;
 const regexZero = /0/g;
+const regexOne = /1/g;
 
-function solution(input) {
-  const oneBlockCount = input
-    .split(regexOne)
-    .filter((value) => value !== '').length;
-
-  const zeroBlockCount = input
-    .split(regexZero)
-    .filter((value) => value !== '').length;
-
-  return Math.min(oneBlockCount, zeroBlockCount);
+function lumpsCount(regex, input) {
+  return input.split(regex).filter((value) => value !== '').length;
 }
 
-// console.log(solution(input));
+function solution(input) {
+  return Math.min(lumpsCount(regexOne, input), lumpsCount(regexZero, input));
+}
 
 module.exports = solution;

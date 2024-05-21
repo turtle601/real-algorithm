@@ -1,4 +1,4 @@
-const solution = require('./Day1');
+const solution = require('./Day2');
 
 describe('백설 공주와 일곱 난쟁이', () => {
   it('예제 입력 1', () => {

@@ -1,4 +1,4 @@
-const solution = require('./Day4');
+const solution = require('./Week1');
 
 describe('쿼드트리 문제', () => {
   it('예제 입력 1', () => {

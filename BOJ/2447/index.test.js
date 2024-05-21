@@ -1,4 +1,4 @@
-const solution = require('./Day1');
+const solution = require('./Day2');
 
 describe('별 찍기 - 10', () => {
   it('예제 입력 1', () => {
@@ -31,6 +31,22 @@ describe('별 찍기 - 10', () => {
 ***************************
 * ** ** ** ** ** ** ** ** *
 ***************************`;
+
+    expect(solution(input)).toEqual(answer);
+  });
+
+  it('예제 입력 2', () => {
+    const input = 9;
+
+    const answer = `*********
+* ** ** *
+*********
+***   ***
+* *   * *
+***   ***
+*********
+* ** ** *
+*********`;
 
     expect(solution(input)).toEqual(answer);
   });

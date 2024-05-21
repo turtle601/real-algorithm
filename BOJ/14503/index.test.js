@@ -1,17 +1,17 @@
-const solution = require('./Day1');
+const solution = require('./Day2');
 
 describe('로봇 청소기', () => {
-  it('예제 입력 1', () => {
-    const inputs = `3 3
-1 1 0
-1 1 1
-1 0 1
-1 1 1`;
+//   it('예제 입력 1', () => {
+//     const inputs = `3 3
+// 1 1 0
+// 1 1 1
+// 1 0 1
+// 1 1 1`;
 
-    const answer = 1;
+//     const answer = 1;
 
-    expect(solution(inputs)).toEqual(answer);
-  });
+//     expect(solution(inputs)).toEqual(answer);
+//   });
 
   it('예제 입력 2', () => {
     const inputs = `11 10

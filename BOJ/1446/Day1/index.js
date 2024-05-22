@@ -1,25 +1,28 @@
-const input = require('fs').readFileSync(0, 'utf-8').trim();
+// const input = require('fs').readFileSync(0, 'utf-8').trim();
 
-function solution(input) {
-	const inputList = input.split('\n');
-	const [N, D] = inputList[0].split(' ').map(Number);	
-  const road = inputList.slice(1).map(v => v.split(' ').map(Number))
-  const dp = [0]; 
+function solution(inputs) {
+  const inputList = inputs
+    .split('\n')
+    .map((value) => value.split(' ').map(Number));
 
-  for (let i = 1; i <= D; i++) {
+  const [_, M] = inputList[0];
+
+  const dp = [0];
+
+  const dotList = inputList.slice(1).sort((x, y) => x[0] - y[0]);
+
+  for (let i = 1; i <= M; i++) {
     dp.push(dp[i - 1] + 1);
 
-    for (const [start, end, edge] of road) {
-      if (i === end) {
-        dp[i] = Math.min(dp[start] + edge, dp[i]);
-
-      }
-    } 
+    for (const [start, end, dist] of dotList) {
+      if (i !== end || !dp[end]) continue;
+      dp[end] = Math.min(dp[start] + dist, dp[end]);
+    }
   }
 
-  return dp[D]
+  return dp[M];
 }
 
-console.log(solution(input));
+// console.log(solution(input));
 
-// module.exports = solution;
+module.exports = solution;

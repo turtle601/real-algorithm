@@ -14,28 +14,28 @@ describe('지름길', () => {
     expect(solution(input)).toEqual(answer);
   });
 
-  // 	it('예제 입력 2', () => {
-  // 		const input = `2 100
-  // 10 60 40
-  // 50 90 20`;
+  it('예제 입력 2', () => {
+    const input = `2 100
+ 10 60 40
+ 50 90 20`;
 
-  // 		const answer = 80;
+    const answer = 80;
 
-  // 		expect(solution(input)).toEqual(answer);
-  // 	});
-  // 	it('예제 입력 3', () => {
-  // 		const input = `8 900
-  // 0 10 9
-  // 20 60 45
-  // 80 190 100
-  // 50 70 15
-  // 160 180 14
-  // 140 160 14
-  // 420 901 5
-  // 450 900 0`;
+    expect(solution(input)).toEqual(answer);
+  });
+  it('예제 입력 3', () => {
+    const input = `8 900
+0 10 9
+20 60 45
+80 190 100
+50 70 15
+160 180 14
+140 160 14
+420 901 5
+450 900 0`;
 
-  // 		const answer = 432;
+    const answer = 432;
 
-  // 		expect(solution(input)).toEqual(answer);
-  // 	});
+    expect(solution(input)).toEqual(answer);
+  });
 });

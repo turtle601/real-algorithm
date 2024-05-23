@@ -1,20 +1,21 @@
 // const input = require('fs').readFileSync(0, 'utf-8').trim();
 
 function solution(input) {
-	const N = Number(input);
-	let sum = 0;
-	let count = 0;
-	let i = 1;
+  const S = Number(input);
+  let sum = 0;
+  let N = 0;
 
-	while (sum <= N) {
-		sum += i;
-		count += 1;
-		i++;
-	}
+  for (let i = 1; i < S; i++) {
+    sum += i;
 
-	return count - 1;
+    if (sum <= S) {
+      N += 1;
+    }
+  }
+
+  return sum > S ? N : N + 1;
 }
 
 // console.log(solution(input));
 
-// module.exports = solution;
+module.exports = solution;

@@ -1,25 +1,3 @@
-/**
- * 풀이:
- *
- * 시간제한: 0.3초
- * 입력할 명령어 최대 개수: 500,000
- *
- * 문자열 삽입(splice 사용) 시 시간복잡도
- *
- * 1번째 삽입: O(0)
- * 2번째 삽입: O(1)
- * 3번째 삽입: O(2)
- * ...
- * 500,000번째 삽입: O(499,999)
- *
- * O(0 + 1 + 2 + ... + 499,999) = O(n^2)
- *
- * 시간 복잡도는 1/2n^2 복잡도를 나타냄 -> 컴퓨터는 1초에 1억번을 계산한다고 했을 때 splice 연산을 사용할 경우 시간초과 발생
- * -> 연결리스트 사용
- */
-
-// const input = require('fs').readFileSync(0, 'utf-8').trim();
-
 class Node {
   constructor(value) {
     this.value = value;
@@ -30,10 +8,6 @@ class Node {
 
 class DoubleLinkedList {
   constructor() {
-    this.init();
-  }
-
-  init = () => {
     this.head = new Node(null);
     this.tail = new Node(null);
 
@@ -41,7 +15,7 @@ class DoubleLinkedList {
     this.tail.prev = this.head;
 
     this.cursor = this.tail;
-  };
+  }
 
   insert = (value) => {
     const newNode = new Node(value);
@@ -60,17 +34,17 @@ class DoubleLinkedList {
     this.cursor.prev.next = this.cursor;
   };
 
-  goPrev() {
-    if (this.cursor.prev !== this.head) {
-      this.cursor = this.cursor.prev;
-    }
-  }
+  goPrev = () => {
+    if (this.cursor.prev === this.head) return;
 
-  goNext() {
-    if (this.cursor !== this.tail) {
-      this.cursor = this.cursor.next;
-    }
-  }
+    this.cursor = this.cursor.prev;
+  };
+
+  goNext = () => {
+    if (this.tail === this.cursor) return;
+
+    this.cursor = this.cursor.next;
+  };
 
   getList = () => {
     const result = [];

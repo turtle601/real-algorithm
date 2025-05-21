@@ -1,4 +1,4 @@
-const solution = require('./day2');
+const solution = require('./day3');
 
 describe('뒤집기 문제', () => {
   it('예제 입력 1', () => {

@@ -22,3 +22,9 @@
 - 모든 테스트를 통과해야 합니다.
 - ESLint를 통과해야 합니다.
 - 스스로 문제 해결법을 떠올리기 위해 Copilot은 사용하지 말아주세요.
+
+## 참고 자료
+
+https://dongwoo.blog/2017/05/08/%EB%B2%88%EC%97%AD-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98-%EC%9E%AC%EA%B7%80-ptc-tco-stc-%EC%97%90-%EB%8C%80%ED%95%9C-%EB%AA%A8%EB%93%A0-%EA%B2%83/
+
+https://github.com/CodeSoom/dsa-week1-assignment-1/blob/main/problem-1
